@@ -8,8 +8,10 @@ image_resource:
 run:
   path: bash
   args:
-    - ls
-    - ls /
-    - -exc
-    - cd ci-assets
-    - git --no-pager log -n 1
+    - -c
+    - |
+      set -eux
+      ls
+      ls /
+      cd ci-assets
+      git --no-pager log -n 1
