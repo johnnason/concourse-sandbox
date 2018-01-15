@@ -11,6 +11,8 @@ resources:
   source:
     uri: https://github.com/johnnason/concourse-output.git
     branch: master
+    username: johnnason
+    password: ((concourse-output-git-pw))
 
 jobs:
 - name: update-changelog
