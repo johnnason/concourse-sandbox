@@ -17,8 +17,9 @@ run:
       cat ../last-commit-message/last-commit.txt | cat - README.md > temp && mv temp README.md
       # git checkout master
       git add README.md
-      # git config --local user.email "john.nason@gmail.com"
-      # git config --local user.name "johnnason"
+      # Move this to resource
+      git config --local user.email "john.nason@gmail.com"
+      git config --local user.name "johnnason"
       git commit -m "Updating Changelog"
       #git push
 outputs:
