@@ -1,0 +1,15 @@
+---
+resources:
+- name: ci-assets
+  type: git
+  source:
+    uri: https://github.com/johnnason/concourse-sandbox.git
+    branch: master
+
+jobs:
+- name: job-hello-world
+  public: true
+  plan:
+  - get: ci-assets
+  - task: hello-world
+    file: ci/tasks/task_hello_world.yml
