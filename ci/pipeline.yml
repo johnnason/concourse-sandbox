@@ -12,5 +12,5 @@ jobs:
   plan:
   - get: ci-assets
     trigger: true
-  - task: hello-world
-    file: ci-assets/ci/tasks/task-hello-world.yml
+  - task: last-commit
+    file: ci-assets/ci/tasks/last-commit.yml
