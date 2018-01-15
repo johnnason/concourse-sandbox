@@ -14,9 +14,9 @@ run:
       set -eux
       cd ci-changelog
       cat ../last-commit-message/last-commit.txt | cat - README.md > temp && mv temp README.md
-      git remote add origin https://github.com/johnnason/concourse-output.git
+      git checkout master
       git add README.md
       git config --local user.email "john.nason@gmail.com"
       git config --local user.name "johnnason"
       git commit -m "Updating Changelog"
-      git push -u origin master
+      git push
