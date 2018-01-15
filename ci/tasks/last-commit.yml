@@ -6,7 +6,7 @@ image_resource:
   source:
     repository: alpine/git
 run:
-  path: bash
+  path: bin/bash
   args:
     - -exc
     - cd ci-assets
