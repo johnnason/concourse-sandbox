@@ -12,11 +12,14 @@ run:
     - -c
     - |
       set -eux
-      cd ci-changelog
+      git clone ci-changelog ci-changelog-update
+      cd ci-changelog-update
       cat ../last-commit-message/last-commit.txt | cat - README.md > temp && mv temp README.md
-      git checkout master
+      # git checkout master
       git add README.md
-      git config --local user.email "john.nason@gmail.com"
-      git config --local user.name "johnnason"
+      # git config --local user.email "john.nason@gmail.com"
+      # git config --local user.name "johnnason"
       git commit -m "Updating Changelog"
-      git push
+      #git push
+outputs:
+  - name: ci-changelog-update
