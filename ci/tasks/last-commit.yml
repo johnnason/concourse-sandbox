@@ -3,9 +3,7 @@ inputs:
 platform: linux
 image_resource:
   type: docker-image
-  source:
-  repository: node
-  tag: 6.3.1
+  source: alpine/git
 run:
   path: bash
   args:
