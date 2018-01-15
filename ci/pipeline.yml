@@ -13,18 +13,12 @@ resources:
     branch: master
 
 jobs:
-- name: last-commit
+- name: update-changelog
   public: true
   plan:
   - get: ci-assets
     trigger: true
   - task: last-commit
     file: ci-assets/ci/tasks/last-commit.yml
-
-- name: update-readme
-  public: true
-  plan:
-  - get: last-commit-message
-    trigger: true
   - task: update-readme
     file: ci-assets/ci/tasks/update-readme.yml
