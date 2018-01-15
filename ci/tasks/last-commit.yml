@@ -6,8 +6,10 @@ image_resource:
   source:
     repository: samueldebruyn/debian-git
 run:
-  path: bin/bash
+  path: bash
   args:
+    - ls
+    - ls /
     - -exc
     - cd ci-assets
     - git --no-pager log -n 1
