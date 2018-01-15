@@ -27,4 +27,4 @@ jobs:
     file: ci-assets/ci/tasks/update-readme.yml
   - put: ci-changelog
     params:
-      repository: ci-changelog-updated
+      repository: ci-changelog-update
