@@ -1,5 +1,5 @@
 inputs:
-  - name: ci-assets
+  - name: last-commit-message
 platform: linux
 image_resource:
   type: docker-image
@@ -12,4 +12,4 @@ run:
     - |
       set -eux
       cd last-commit-message/output
-      echo last_commit.txt
+      cat last_commit.txt

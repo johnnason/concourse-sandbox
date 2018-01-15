@@ -14,3 +14,5 @@ run:
       cd ci-assets
       mkdir output
       git --no-pager log -n 1 > output/last_commit.txt
+outputs:
+  - name: last-commit-message
