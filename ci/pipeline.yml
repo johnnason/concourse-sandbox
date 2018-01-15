@@ -11,5 +11,6 @@ jobs:
   public: true
   plan:
   - get: ci-assets
+    trigger: true
   - task: hello-world
     file: ci-assets/ci/tasks/task-hello-world.yml
