@@ -12,4 +12,4 @@ jobs:
   plan:
   - get: ci-assets
   - task: hello-world
-    file: ci-assets/ci/tasks/task_hello_world.yml
+    file: ci-assets/ci/tasks/task-hello-world.yml
