@@ -11,6 +11,5 @@ run:
     - -c
     - |
       set -eux
-      cd ci-assets
-      mkdir output
-      git --no-pager log -n 1 > output/last_commit.txt
+      cd last-commit-message/output
+      echo last_commit.txt

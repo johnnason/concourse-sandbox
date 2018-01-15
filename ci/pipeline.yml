@@ -6,6 +6,12 @@ resources:
     uri: https://github.com/johnnason/concourse-sandbox.git
     branch: master
 
+- name: ci-changelog
+  type: git
+  source:
+    uri: https://github.com/johnnason/concourse-output.git
+    branch: master
+
 jobs:
 - name: last-commit
   public: true
@@ -14,3 +20,15 @@ jobs:
     trigger: true
   - task: last-commit
     file: ci-assets/ci/tasks/last-commit.yml
+  outputs:
+  - name: last-commit-message
+
+- name: update-readme
+  public: true
+  inputs:
+  - name: last-commit-message
+  plan:
+  - get: last-commit
+    trigger: true
+  - task: update-readme
+    file: ci-assets/ci/tasks/update-readme.yml
