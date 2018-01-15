@@ -3,7 +3,8 @@ inputs:
 platform: linux
 image_resource:
   type: docker-image
-  source: alpine/git
+  source:
+    repository: alpine/git
 run:
   path: bash
   args:
