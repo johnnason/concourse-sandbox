@@ -6,11 +6,11 @@ resources:
     uri: https://github.com/johnnason/concourse-sandbox.git
     branch: master
 
-- name: ci-changelog
-  type: git
-  source:
-    uri: https://github.com/johnnason/concourse-output.git
-    branch: master
+# - name: ci-changelog
+#   type: git
+#   source:
+#     uri: https://github.com/johnnason/concourse-output.git
+#     branch: master
 
 jobs:
 - name: update-changelog

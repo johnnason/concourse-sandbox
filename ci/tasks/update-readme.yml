@@ -11,5 +11,6 @@ run:
     - -c
     - |
       set -eux
+      ls
       cd last-commit-message/output
       cat last_commit.txt
