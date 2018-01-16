@@ -1,4 +1,5 @@
 inputs:
+  - name: ci-assets
   - name: last-commit-message
   - name: ci-changelog
 platform: linux
