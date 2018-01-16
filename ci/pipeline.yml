@@ -13,11 +13,6 @@ resources:
     branch: master
     username: johnnason
     password: ((concourse-output-git-pw))
-    git_config:
-    - name: user.email
-      value: john.nason@gmail.com
-    - name: user.name
-      value:  johnnason
 
 jobs:
 - name: update-changelog
