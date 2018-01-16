@@ -16,8 +16,8 @@ run:
       cd ci-changelog-update
       cat ../last-commit-message/last-commit.txt | cat - README.md > temp && mv temp README.md
       git add README.md
-      git config --local user.email "john.nason@gmail.com"
-      git config --local user.name "johnnason"
+      git config --local user.email $GIT_EMAIL
+      git config --local user.name $GIT_USER
       git commit -m "Updating Changelog"
 outputs:
   - name: ci-changelog-update

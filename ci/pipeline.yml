@@ -25,6 +25,9 @@ jobs:
     file: ci-assets/ci/tasks/last-commit.yml
   - task: update-readme
     file: ci-assets/ci/tasks/update-readme.yml
+    params:
+      GIT_USER: johnnason
+      GIT_EMAIL: john.nason@gmail.com
   - put: ci-changelog
     params:
       repository: ci-changelog-update
