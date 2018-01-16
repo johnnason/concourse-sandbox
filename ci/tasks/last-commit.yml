@@ -1,6 +1,6 @@
 inputs:
   - name: ci-assets
-  - name: scripts
+  - name: ci/scripts
 platform: linux
 image_resource:
   type: docker-image
