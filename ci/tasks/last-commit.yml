@@ -1,17 +1,13 @@
 inputs:
   - name: ci-assets
+  - name: scripts
 platform: linux
 image_resource:
   type: docker-image
   source:
     repository: samueldebruyn/debian-git
 run:
-  path: bash
-  args:
-    - -c
-    - |
-      set -eux
-      cd ci-assets
-      git --no-pager log -n 1 > ../last-commit-message/last-commit.txt
+  path: ./scripts/last-commit.sh
+
 outputs:
   - name: last-commit-message
