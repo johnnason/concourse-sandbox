@@ -3,15 +3,15 @@ resources:
 - name: ci-assets
   type: git
   source:
-    uri: https://github.com/johnnason/concourse-sandbox.git
+    uri: ((assets-repo))
     branch: master
 
 - name: ci-changelog
   type: git
   source:
-    uri: https://github.com/johnnason/concourse-output.git
+    uri: ((changelog-repo))
     branch: master
-    username: johnnason
+    username: ((concourse-output-git-user))
     password: ((concourse-output-git-pw))
 
 jobs:
@@ -26,8 +26,8 @@ jobs:
   - task: update-readme
     file: ci-assets/ci/tasks/update-readme.yml
     params:
-      GIT_USER: johnnason
-      GIT_EMAIL: john.nason@gmail.com
+      GIT_USER: ((readme-update-git-user))
+      GIT_EMAIL: ((readme-update-git-email))
   - put: ci-changelog
     params:
       repository: ci-changelog-update
