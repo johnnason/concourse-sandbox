@@ -1,13 +1,12 @@
 inputs:
   - name: ci-assets
-  - name: ci/scripts
 platform: linux
 image_resource:
   type: docker-image
   source:
     repository: samueldebruyn/debian-git
 run:
-  path: ./scripts/last-commit.sh
+  path: ci-assets/ci/scripts/last-commit.sh
 
 outputs:
   - name: last-commit-message
