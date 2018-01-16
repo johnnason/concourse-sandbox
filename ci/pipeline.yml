@@ -14,9 +14,9 @@ resources:
     username: johnnason
     password: ((concourse-output-git-pw))
     git_config:
-    - name: --local user.email
+    - name: user.email
       value: john.nason@gmail.com
-    - name: --local user.name
+    - name: user.name
       value:  johnnason
 
 jobs:
